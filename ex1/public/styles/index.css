@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* start shared styles */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 48px 4%;
+  background-color: #d6d4d4;
+}
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn {
+  background: #ecae27;
+  color: #666464;
+  border: none;
+  padding: 10px 48px;
+  border-radius: 8px;
+  width: fit-content;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0px 4px 4px #0000001a;
+}
+/* end shared styles */
+/* start add user btn */
+.add-user-btn-container {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px #0000001a;
+}
+/* end add user btn */
+/* start table */
+.table-container {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px #0000001a;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+.table-users {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-users th {
+  min-width: 150px;
+  font-size: medium;
+  text-align: left;
+  padding: 8px 0;
+}
+.table-users th:last-child {
+  text-align: right;
+}
+.table-users tbody tr {
+  border-top: 1px solid #d6d4d4;
+}
+.table-users td {
+  padding: 12px 0;
+  font-size: 0.8rem;
+}
+.table-users tbody tr td:last-child {
+  text-align: right;
+}
+.table-users tbody tr td a {
+  cursor: pointer;
+}
+.status-cell {
+  padding: 4px 8px;
+  border-radius: 7px;
+  color: #fff;
+}
+.valide {
+  background-color: #5be881;
+}
+.rejected {
+  background-color: #ff0000;
+}
+.on-validation {
+  background-color: #fdb64d;
+}
+/* end table */
+/* start modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #00000066;
+  backdrop-filter: blur(4px);
+}
+.modal-form-container {
+  width: 90%;
+  border-radius: 10px;
+  padding: 16px 32px;
+  box-shadow: 0px 0px 6px #00000038;
+  background-color: #fff;
+}
+.modal-input-group-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 18px 48px;
+  padding: 12px 0;
+}
+.modal-input-container {
+  display: flex;
+  flex-direction: column;
+}
+.modal-input-container label {
+  font-size: 12px;
+  color: #828282;
+  margin-bottom: 4px;
+}
+.modal-input-container input,
+.modal-input-container select {
+  width: 100%;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+.modal-submit-container {
+  padding: 8px 0 0 0;
+}
+/* end modal */
+
+/* media screen */
+@media screen and (max-width: 900px) {
+  .modal-input-group-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px 24px;
+  }
+  .separator {
+    display: none;
+  }
+  .table-users th {
+    font-size: small;
+  }
+}
+@media screen and (max-width: 500px) {
+  .modal-input-group-container {
+    grid-template-columns: 1fr;
+  }
+}

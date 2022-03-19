@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Data Management</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!-- start table -->
+        <div class="table-container">
+          <table class="table-users" id="table-users">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Date de création</th>
+                <th>Etat</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Nom d'utilisateur</th>
+                <th>Matricule</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <!-- end table -->
+        <!-- btn add user -->
+        <div class="btn-container add-user-btn-container">
+          <button class="btn" id="add-user-btn-container">Add User</button>
+        </div>
+        <!-- end btn add user -->
+        <!-- start modal -->
+        <div class="modal" id="modal">
+          <div class="modal-form-container" id="modal-form-container">
+            <h2>Ajout d'utilisateurs</h2>
+            <form id="modal-form" method="post">
+              <div class="modal-input-group-container">
+                <div class="modal-input-container">
+                  <label for="nom">Nom</label>
+                  <input type="text" name="nom" required />
+                </div>
+                <div class="modal-input-container">
+                  <label for="prenom">Prénom</label>
+                  <input type="text" name="prenom" required />
+                </div>
+                <div class="modal-input-container">
+                  <label for="etat">Etat</label>
+                  <!-- <input type="text" name="etat" id="etat" /> -->
+                  <select name="etat" required>
+                    <option value="">Choisir un état</option>
+                    <option value="En validation">En validation</option>
+                    <option value="Validé">Validé</option>
+                    <option value="Rejeté">Rejeté</option>
+                  </select>
+                </div>
+                <div class="modal-input-container">
+                  <label for="username">Nom d'utilisateur</label>
+                  <input type="text" name="username" required />
+                </div>
+                <div class="modal-input-container">
+                  <label for="created-at">Date de création</label>
+                  <input type="datetime-local" name="created-at" required />
+                </div>
+                <div class="separator"></div>
+                <div class="modal-input-container">
+                  <label for="matricule">Matricule</label>
+                  <input type="text" name="matricule" required />
+                </div>
+              </div>
+              <div class="btn-container modal-submit-container">
+                <button class="btn" type="submit">Enregistrer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- end modal -->
+      </div>
+    </main>
+    <!-- js -->
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
