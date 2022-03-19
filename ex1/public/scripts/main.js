@@ -60,7 +60,7 @@ function addUsersToTable(local_users, local_users_table) {
       day: "2-digit",
     })}</td>
     <td>
-      <span class="status-cell ${
+      <p class="status-cell ${
         user.status === "En validation"
           ? "on-validation"
           : user.status === "Rejeté"
@@ -68,7 +68,7 @@ function addUsersToTable(local_users, local_users_table) {
           : "valide"
       }">
         ${user.status}
-      </span>
+      </p>
     </td>
     <td>${user.firstName}</td>
     <td>${user.lastName}</td>
